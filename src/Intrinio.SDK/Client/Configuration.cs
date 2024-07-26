@@ -226,10 +226,6 @@ namespace Intrinio.SDK.Client
             get { return _basePath; }
             set {
                 _basePath = value;
-                // pass-through to ApiClient if it's set.
-                if(_apiClient != null) {
-                    _apiClient.RestClient.Options.BaseUrl = new Uri(_basePath);
-                }
             }
         }
 
@@ -245,7 +241,7 @@ namespace Intrinio.SDK.Client
         {
             
             get { return ApiClient.RestClient.Options.MaxTimeout; }
-            set { ApiClient.RestClient.Options.MaxTimeout = value; }
+            set {  }
         }
         
         /// <summary>

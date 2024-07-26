@@ -165,10 +165,10 @@ namespace Intrinio.SDK.Client
                 pathParams, contentType);
 
             // set timeout
-            
-            RestClient.Options.MaxTimeout = Configuration.Timeout;
+            request.Timeout = Configuration.Timeout;
+
             // set user agent
-            RestClient.Options.UserAgent = Configuration.UserAgent;
+
 
             var allowRetries = Intrinio.SDK.Client.Configuration.Default.AllowRetries;
             var retryCount = 0;
